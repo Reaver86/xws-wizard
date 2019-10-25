@@ -1,0 +1,18 @@
+:host {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+
+  margin-top: 2em;
+
+  & > hr {
+    flex: auto;
+    color: rgba(34, 36, 38, 0.15);
+    border: 0;
+    border-top-width: 1px;
+    border-top-style: solid;
+    height: 0;
+    margin-left: .5em;
+    margin-right: .5em;
+  }
+}

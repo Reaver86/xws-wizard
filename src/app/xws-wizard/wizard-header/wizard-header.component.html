@@ -1,0 +1,7 @@
+<ng-container *ngFor="let step of steps; let last = last; let i = index">
+  <button [class.active]="i === 0">
+    <span class="number">{{i+1}}</span>
+    <span>{{step.label}}</span>
+  </button>
+  <hr *ngIf="!last">
+</ng-container>
