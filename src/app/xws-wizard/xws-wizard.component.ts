@@ -1,4 +1,4 @@
-import {AfterContentInit, Component, ContentChildren, QueryList} from '@angular/core';
+import {AfterContentInit, Component, ContentChildren, QueryList, TemplateRef, ViewContainerRef} from '@angular/core';
 import {WizardStepComponent} from './wizard-step/wizard-step.component';
 
 @Component({

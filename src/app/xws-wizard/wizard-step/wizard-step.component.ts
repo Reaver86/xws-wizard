@@ -7,10 +7,11 @@ import {Component, Input, OnInit} from '@angular/core';
 })
 export class WizardStepComponent implements OnInit {
 
-  @Input() label = 'step 1';
+  constructor() {}
+
+  @Input() label: string;
   @Input() step: WizardStepComponent;
 
   ngOnInit() {
   }
-
 }
