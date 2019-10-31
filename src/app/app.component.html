@@ -1,32 +1,39 @@
 <h1>some title</h1>
 <xws-wizard>
-  <xws-wizard-step label="User">
-    this is fancy text
-    <xws-wizard-nav>
-      <button xwsNext>Next</button>
-    </xws-wizard-nav>
-  </xws-wizard-step>
+  <ng-template #template let-variable>
+    <xws-wizard-step label="User">
+      this is fancy text
+      <xws-wizard-nav>
+        <button xwsNext>Next</button>
+      </xws-wizard-nav>
+    </xws-wizard-step>
+  </ng-template>
 
-  <xws-wizard-step label="Login">
-    this is fancy text 2
-    <xws-wizard-nav>
-      <button xwsNext>Next</button>
-    </xws-wizard-nav>
-  </xws-wizard-step>
+  <ng-template #template let-variable>
+    <xws-wizard-step label="Login">
+      this is fancy text 2
+      <xws-wizard-nav>
+        <button xwsNext>Next</button>
+      </xws-wizard-nav>
+    </xws-wizard-step>
+  </ng-template>
 
-  <xws-wizard-step label="Memberships">
-    this is fancy text 3
-    <xws-wizard-nav>
-      <button xwsNext>Next</button>
-    </xws-wizard-nav>
-  </xws-wizard-step>
+  <ng-template #template let-variable>
+    <xws-wizard-step label="Memberships">
+      this is fancy text 3
+      <xws-wizard-nav>
+        <button xwsNext>Next</button>
+      </xws-wizard-nav>
+    </xws-wizard-step>
+  </ng-template>
 
-
-  <xws-wizard-step label="Summary">
-    this is fancy text 4
-    <xws-wizard-nav>
-      <button xwsNext>Next</button>
-    </xws-wizard-nav>
-  </xws-wizard-step>
+  <ng-template #template let-variable>
+    <xws-wizard-step label="Summary">
+      this is fancy text 4
+      <xws-wizard-nav>
+        <button xwsNext>Next</button>
+      </xws-wizard-nav>
+    </xws-wizard-step>
+  </ng-template>
 </xws-wizard>
 

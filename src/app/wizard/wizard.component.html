@@ -1,3 +1,2 @@
-<xws-wizard-header [steps]="steps.toArray()" [activeIndex]="activeStepIndex"></xws-wizard-header>
-<ng-content></ng-content>
-<!--TODO gerendert werden soll hier nur eines der wizard-step components, und zwar die mit dem passenden activeStepIndex-->
+<xws-wizard-header [steps]="stepTemplates.toArray()" [activeIndex]="activeStepIndex"></xws-wizard-header>
+<ng-container [ngTemplateOutlet]="activeStepTemplate"></ng-container>

@@ -1,4 +1,4 @@
-import {Component, ContentChildren, QueryList} from '@angular/core';
+import { AfterContentInit, Component, ContentChildren, QueryList, TemplateRef } from '@angular/core';
 import {WizardStepComponent} from './wizard-step/wizard-step.component';
 
 @Component({
@@ -6,9 +6,15 @@ import {WizardStepComponent} from './wizard-step/wizard-step.component';
   templateUrl: './wizard.component.html',
   styleUrls: ['./wizard.component.scss']
 })
-export class WizardComponent {
+export class WizardComponent implements AfterContentInit {
 
+  activeStepTemplate: TemplateRef<WizardStepComponent>;
   activeStepIndex = 0;
 
-  @ContentChildren(WizardStepComponent) steps: QueryList<WizardStepComponent>;
+  @ContentChildren('template') stepTemplates: QueryList<TemplateRef<WizardStepComponent>>;
+
+  ngAfterContentInit() {
+    console.log(this.stepTemplates.toArray()[0]);
+    this.activeStepTemplate = this.stepTemplates.find((item, index) => index === this.activeStepIndex);
+  }
 }
